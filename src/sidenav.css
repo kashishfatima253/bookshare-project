@@ -1,0 +1,138 @@
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+
+
+.side-menu{
+    position: fixed;
+    width: 20%;
+    background-color: #E5C587;
+    height: 100%;
+    padding: 30px 10px;
+    /* overflow: scroll; */
+    box-sizing: border-box;
+    /* transition: width .4s ease-in; */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@keyframes side-slider{
+    0%{
+        width: 20%;
+    }
+    100%{
+        width: 5%;
+    }
+}
+
+.side-menu.inactive{
+    animation: side-slider 0.8s ease-in-out 0s alternate forwards;
+}
+
+
+.side-menu .top-section{
+    position: relative;
+}
+
+
+.side-menu.side-menu.inactive .top-section .logo{
+    width: 35px;
+    height: 35px;
+    
+}
+
+.side-menu.side-menu.inactive .top-section .logo .book-img{
+    margin-left: 10px;
+    
+}
+
+.side-menu.inactive form{
+
+    width: 20px;
+}
+
+.side-menu.inactive form input{
+    width: 20px;
+}
+
+.side-menu.inactive form .fa{
+    left: 15px;
+}
+
+.side-menu .top-section .logo{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    /* overflow: hidden; */
+    /* display: inline-block; */
+}
+
+.side-menu .top-section .logo .logo-heading {
+    
+    font-size: 20px;
+    /* padding: 0 20px; */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    /* display: block; */
+    transition: all 1s ease;
+ 
+}
+
+.side-menu.inactive .top-section .logo-heading{
+    display: none;
+}
+
+
+
+.side-menu .top-section .logo img{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+
+.side-menu .top-section .toggle-menu-btn{
+    font-size: 15px;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.side-menu.inactive .top-section .toggle-menu-btn{
+    right: -50px;
+}
+
+.side-menu .search-controller input[type=search] {
+    border: 0;
+    outline: none;
+    height: 35px;
+    background-color: #222;
+    border-radius: 5px;
+    display: inline;
+    margin: 20px 0;
+    width: 100%;
+    color: white;
+}
+
+.side-menu .search-controller{
+    display: flex;
+}
+
+.divider{
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #2222;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
